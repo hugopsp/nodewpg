@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <label for="name">Please enter your name:(with letter only)</label>
+            <input type="text" name="name" pattern="^[a-zA-Z]+$" required />
+        </fieldset>
+
+        <fieldset>
+            <label for="email">Please enter your email:</label>
+            <input type="text" name="email" required />
+        </fieldset>
+
+        <fieldset>
+                <label for="password">Please enter your password:(with numbers only)</label>
+                <input type="password" name="password" required />
+            </fieldset>
+
+        <fieldset>
+            <label for="birthday">Please enter your birthday:</label>
+            <input type="date" name="birthday" />
+        </fieldset>
+     
+        <input type="submit" name="Submit"></input>
+    </form>
+</body>
+
+</html>

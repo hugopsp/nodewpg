@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Create User</title>
+</head>
+
+<body>
+  <h1>Create User</h1>
+  <hr>
+
+  <form>
+    <label>Enter your :</label>
+    <input type="text" name="name" placeholder="name">
+  </form>
+
+  <form>
+    <label>Movies:</label>
+    <select name="Movies">
+      <option value="">Please select a movie</option>
+      <option value="deadpool">Deadpool</option>
+      <option value="batman_vs_superman"> Batman v Superman</option>
+      <option value="civil_war">Captain America: Civil War</option>
+      <option value="doctor_strange">Doctor Strange</option>
+      <option value="suicide_squad"> Suicide Squad</option>
+      <option value="apocalypse"> X-Men: Apocalypse</option>
+      <option value="gotg_vol2">Guardians of the Galaxy Vol 2</option>
+      <option value="justice_league">Justice League</option>
+      <option value="logan">Logan</option>
+      <option value="homecoming">Spider-Man: Homecoming</option>
+      <option value="wonder_woman" selected="selected">Wonder Woman</option>
+      <option value="thor_ragnarok">Thor: Ragnarok</option>
+      <option value="black_panther">Black Panther</option>
+    </select>
+
+    <br>
+    <textarea name="bio" placeholder="Please let us what do you think about these movie"></textarea>
+
+    <br>
+    <label>If wanted please enter your avatar photo</label>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+      <input type="file" name="filename" />
+    </form>
+
+    <label>Click here to Clear the form</label>
+    <form>
+        <button value="create" name="Clear Form">+ Form</button>
+    </form>
+
+    <label>Click here to add a new user</label>
+    <form>
+        <button value="create" name="Add new user">+ User</button>
+    </form>
+
+
+
+
+  </form>
+</body>
+
+</html>
