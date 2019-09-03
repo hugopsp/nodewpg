@@ -1,0 +1,21 @@
+<head>
+    <script>
+        const first = prompt('Please enter your first name');
+        const last = prompt('Please enter your last name');
+
+        alert(`Welcome ${first} ${last}`);
+        
+        setTimeout(function () {
+            const login = confirm("Do you still want to be logged?");
+            if (login) {
+                alert(`${first} your session has been restored`);
+            } else {
+                alert(`${first} your session has expaired`);
+            }
+        }, 10000);
+    </script>
+</head>
+
+<body>
+    <h1>How are you doing :)</h1>
+</body>

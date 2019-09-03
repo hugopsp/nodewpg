@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercise 13</title>
+
+    <script>
+        const userNumber = prompt('input the number of seconds that he would like to stay in our site');
+        let number = userNumber;
+
+        const sendNumber = userNumber * 500;//I put 500 because 1000 it takes too long
+        const secondsFunction = function () {
+            number--;
+            if (number === 0) {
+                console.log('Your session has expired, come again soon!');
+            } else {
+                console.log(`${number} Seconds`);
+            }
+        }
+        const id = setInterval(secondsFunction, sendNumber);        
+    </script>
+</head>
+
+<body>
+    <h1>Exercise 13: Open console</h1>
+</body>
+
+</html>
