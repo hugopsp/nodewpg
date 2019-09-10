@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Elements</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .orange {
+            color: orange;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            const firstli =  document.querySelector('li');
+            firstli.classList.add('orange');
+            let nextElement = firstli.nextElementSibling;
+            while (nextElement) {
+                nextElement.classList.add('orange');
+                nextElement = nextElement.nextElementSibling;
+            }
+            let previous = document.querySelector('ul').lastElementChild;
+            while (previous) {
+                if (previous.textContent === 'Item 1'){
+                    previous.className = "green";
+                }
+                if (previous.textContent === 'Item 3'){
+                    previous.className = "red";
+                }
+                previous = previous.previousElementSibling;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+</body>
+
+</html>

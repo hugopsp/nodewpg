@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form Checkbox</title>
+    <script>
+        
+        window.onload = function () {
+            const form = document.querySelector("form");
+            const submit = document.querySelector('input[name="submit"]');
+
+            submit.addEventListener("click", function () 
+            {
+                form.onsubmit = function (event) 
+                {
+                    event.preventDefault();
+                    const superHeroSelector = [];
+                    const superhero = form.elements["superheroe[]"];
+                    for (let i = 0; i < superhero.length; i++) 
+                    {
+                        if (superhero[i].checked) {
+                            superHeroSelector.push(superhero[i].value);
+                        }
+                    }
+                    if (superHeroSelector.length === 0) 
+                    {
+                        alert("No way you dont like any superhero");
+                    } else 
+                    {
+                        if (superHeroSelector.length === 1) {
+                            alert(`The best superhero is: ${superHeroSelector[0]}`);
+                        } else {
+                            let superHeroNames = "";
+                            superHeroSelector.forEach(hero => {
+                                superHeroNames += `${hero} \n`;
+                            });
+                            alert(`The dream team would be:\n${superHeroNames}`);
+                        }
+                    }
+                };
+            });
+        };
+    </script>
+
+</head>
+
+<body>
+    <h1>Please select your favourite childhood heroes :)</h1>
+    <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+        <input type="checkbox" name="superheroe[]" value="Wolverine"> Wolverine
+        <input type="checkbox" name="superheroe[]" value="The Invisible Woman"> The Invisible Woman
+        <input type="checkbox" name="superheroe[]" value="Iron Man"> Iron Man
+        <input type="checkbox" name="superheroe[]" value="Superman"> Superman
+        <input type="checkbox" name="superheroe[]" value="Daredevil"> Daredevil
+        <input type="checkbox" name="superheroe[]" value="The Flash"> The Flash
+        <input type="checkbox" name="superheroe[]" value="Captain America"> Captain America
+        <input type="checkbox" name="superheroe[]" value="Wonder Woman"> Wonder Woman
+        <input type="checkbox" name="superheroe[]" value="Spider-Man"> Spider-Man
+        <input type="checkbox" name="superheroe[]" value="Batman"> Batman
+        <input type="submit" name="submit" value="Submit" />
+    </form>
+
+</body>
+
+</html>

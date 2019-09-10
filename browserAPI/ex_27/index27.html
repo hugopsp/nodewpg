@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        let numberArray = [];
+        const listElemtnt = document.createElement('ul');
+        for (let i = 1; i < 101; i++) { numberArray.push(i); }
+
+        const color = function (number) {
+            return number % 2 === 0 ? 'red' : 'green';
+        }
+
+        const list = function (listItem, index) {
+            let listItemElemtnt = document.createElement('li');
+            listItemElemtnt.innerHTML = `Item ${listItem} as li element content`;
+            listItemElemtnt.style.color = color(index + 1);
+            listElemtnt.appendChild(listItemElemtnt);
+        }
+
+        window.onload = function () {
+            numberArray.forEach(list);
+            const body = document.querySelector('body');
+            body.appendChild(listElemtnt);
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

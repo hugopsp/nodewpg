@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Events</title>
+    <script>
+        window.onload = function () {
+            const firstButton = document.querySelector('#firstButton');
+            const message = () => alert('You clicked an event listened element');
+            firstButton.addEventListener("click", message);
+            
+            const secondButton= document.querySelector('#secondButton');
+            const changeColor = () => secondButton.style.backgroundColor = 'yellow';
+            secondButton.addEventListener("click", changeColor);
+            
+            
+        }    
+    </script>
+</head>
+
+<body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Change color to yellow</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+</body>
+
+</html>

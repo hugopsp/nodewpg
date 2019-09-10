@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Properties</title>
+    <script>
+        window.onload = function () {
+            const form = document.querySelector("form");
+            const inputSubmit = document.querySelector("input");
+            const select = document.querySelector("select");
+
+            let indexSelected = select.selectedIndex
+            let countrySelected = select.options[indexSelected].innerHTML;
+
+            select.addEventListener("change", function (event) {
+                indexSelected = event.target.selectedIndex;
+                countrySelected = event.target.options[indexSelected].innerHTML;
+            });
+
+            const submitForm = () => { 
+                form.onsubmit = event => {
+                    event.preventDefault();//prevent no choice.
+                    alert(
+                        `${countrySelected} has been selected and it has ${indexSelected} as id`
+                    );
+                };
+            };
+            inputSubmit.addEventListener("click", submitForm);
+        };
+    </script>
+</head>
+
+<body>
+    <form action="save_usuer.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+        <select id="countries">
+            <option value="1">Argentina</option>
+            <option value="2">Brazil</option>
+            <option value="3">Canada</option>
+            <option value="4">Colombia</option>
+        </select>
+        <input type="submit" name="submit" value="Submit" />
+    </form>
+</body>
+
+</html>

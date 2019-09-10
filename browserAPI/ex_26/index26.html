@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        window.onload = function () {
+            const body = document.querySelector('body');
+            const list = document.createElement('ul');
+            const nameArrey = ['Hugo', 'Serafim', 'bob', 'sabs', 'jonatas', 'jm', 'iago', 'wali', 'marina', 'sanity'];
+
+            nameArrey.forEach(name => {
+                let itemLI = document.createElement('li');
+                itemLI.innerHTML = name;
+                list.appendChild(itemLI);
+            });
+            body.appendChild(list);
+        }    
+    </script>
+</head>
+
+<body>
+    <h1>hey look some Dynamic content!!!</h1>
+</body>
+
+</html>

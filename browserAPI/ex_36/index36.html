@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Events</title>
+    <script>
+        window.onload = function () {
+            const main = document.querySelector('html');
+            const message = (e) => console.log(`Click possition: x-axis: ${e.clientX}, y-axis: ${e.clientY}`);
+            main.addEventListener("click", message);
+        }    
+    </script>
+</head>
+
+<body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+</body>
+
+</html>
